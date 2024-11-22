@@ -1,0 +1,438 @@
+@charset "UTF-8";
+
+/* ---------- MAIN ---------- */
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ---------- NAVIGATION and LINKS ---------- */
+
+
+
+a:link {
+    color: blanchedalmond;
+}
+
+a:visited {
+    color: sandybrown ;
+}
+
+a:hover {
+    color: darkgoldenrod;
+}
+
+a:active {
+    color: gold;
+}
+
+.main_nav {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    padding: .3em;
+    margin: 0;
+}
+.main_nav a {
+    color: white;
+    padding: 5px 25px 5px 25px;
+    text-decoration: none;
+}
+.main_nav a:hover {
+    background-color:white;
+    color: black;
+}
+
+.main_nav a:active {
+    color: lightgray;
+    background-color: dimgrey;
+}
+
+/* ---------- HERO ---------- */
+
+.hero_image {
+    display: flex;
+    height: auto;
+    position: center;
+    position: relative;
+    margin: 0;
+    padding-bottom: 0px;
+    background-color: black;
+}
+
+/* ---------- MAIN elements ---------- */
+
+#content {
+    grid-area: content;
+    object-fit: cover;
+    margin: 30px 10px 30px 10px;
+    padding: 30px 50px 30px 50px;
+}
+
+#who {
+    grid-area: who;
+    object-fit: cover;
+    margin: 30px 10px 0px 10px;
+    padding: 30px 50px 30px 50px;
+}
+
+#quote {
+    grid-area: quote;
+    object-fit: cover;
+    text-align: center;
+    margin: 0px 10px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    background-color: black;
+}
+
+#hire {
+    grid-area: hire;
+    object-fit: cover;
+    margin: 0px 10px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    background-color: black;
+}
+
+
+#sketch {
+    grid-area: sketch;
+    object-fit: cover;
+    margin: 15px 15px 15px 15px;
+}
+
+#photo {
+    grid-area: photo;
+    object-fit: cover;
+    margin: 15px 15px 15px 15px;
+}
+
+#youtube {
+    grid-area: youtube;
+    object-fit: cover;
+    margin: 15px 15px 15px 15px;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.name {
+    color: burlywood;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-align: left;
+    color: wheat;
+    background-color: tan;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+footer {
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font: bold 3em times, serif;
+    text-shadow: .05em .05em .1em rgb(88, 62, 62);
+}
+
+h2 {
+    font: bold 1.8em times, serif;
+    color: burlywood;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+
+/* ---------- GRID ---------- */
+
+#index_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    'hire      sketch      photo       youtube'
+    'quote      who         who         who'
+    'quote       content     content     content'
+    ;
+    justify-content: center;
+    background-color: rgb(37, 22, 13);
+    margin: 0 auto;
+}
+
+#about_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        'hire       content     content     content'
+        'quote      content     content     content'
+        'quote      content     content     content'
+        ;
+        justify-content: center;
+        background-color: rgb(37, 22, 13);
+        margin: 0 auto;
+    }
+
+#video_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        'hire      content     content     content'
+        'quote      content     content     content'
+        ;
+        justify-content: center;
+        background-color: rgb(37, 22, 13);
+        margin: 0 auto;
+    }
+
+#contact_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        'quote      content     content     content'
+        'quote      content     content     content'
+        ;
+        justify-content: center;
+        background-color: rgb(37, 22, 13);
+        margin: 0 auto;
+    }
+
+
+#sketchphoto {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        'hire       content     content     content'
+        'quote      gallery     gallery     gallery'
+        'quote      gallery     gallery     gallery'
+        ;
+        justify-content: center;
+        background-color: rgb(37, 22, 13);
+        margin: 0 auto;
+    }
+
+
+/* ---------- MAIN about ---------- */
+
+.imgfloat {
+    float: left;
+    margin: 1px;
+}
+
+/* ---------- MAIN contact ---------- */
+
+button {
+    background-color: saddlebrown;
+    color: gold;
+}
+
+/* ---------- GALLERY art and photo ---------- */
+
+#gallery {
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 15px;
+    margin: 20px;
+}
+
+/* ---------- MAIN RESPONSIVE ---------- */
+
+@media screen and (max-width: 800px) {
+#index_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    'sketch     photo'
+    'youtube    who'
+    'quote      quote'
+    'content    content'
+    'hire       hire'
+    ;
+    justify-content: center;
+    background-color: rgb(37, 22, 13);
+    margin: 0 auto;
+}
+}
+
+@media screen and (max-width: 600px) {
+    #index_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas:
+        'sketch'
+        'photo'
+        'youtube'
+        'who'
+        'quote'
+        'content'
+        'hire'
+        ;
+        justify-content: center;
+        background-color: rgb(37, 22, 13);
+        margin: 0 auto;
+    }
+    }
+
+
+
+/* ---------- VIDEOS RESPONSIVE ---------- */
+
+@media screen and (max-width: 800px) {
+    #video_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        'quote      quote'
+        'content    content'
+        'hire       hire'
+        ;
+        justify-content: center;
+        background-color: rgb(37, 22, 13);
+        margin: 0 auto;
+    }
+    }
+    
+    @media screen and (max-width: 600px) {
+        #video_container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+            'quote'
+            'content'
+            'hire'
+            ;
+            justify-content: center;
+            background-color: rgb(37, 22, 13);
+            margin: 0 auto;
+        }
+        }
+
+/* ---------- CONTACT RESPONSIVE ---------- */
+
+@media screen and (max-width: 800px) {
+#contact_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    'quote      quote'
+    'content    content'
+    ;
+    justify-content: center;
+    background-color: rgb(37, 22, 13);
+    margin: 0 auto;
+}
+}
+@media screen and (max-width: 600px) {
+    #contact_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        'quote'
+        'content'
+        ;
+        justify-content: center;
+        background-color: rgb(37, 22, 13);
+        margin: 0 auto;
+    }
+    }
+
+
+/* ---------- ABOUT RESPONSIVE ---------- */
+
+@media screen and (max-width: 800px) {
+    #about_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        'quote      quote'
+        'content    content'
+        'hire       hire'
+        ;
+        justify-content: center;
+        background-color: rgb(37, 22, 13);
+        margin: auto;
+}
+}
+
+
+@media screen and (max-width: 600px) {
+    #about_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        'quote'
+        'content'
+        'hire'
+        ;
+        justify-content: center;
+        background-color: rgb(37, 22, 13);
+        margin: 0 auto;
+}
+}
+
+
+/* ---------- SKETCH and PHOTO RESPONSIVE ---------- */
+
+@media screen and (max-width: 80px) {
+#sketchphoto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    'quote      quote'
+    'content    content'
+    'hire       hire'
+    ;
+    justify-content: center;
+    background-color: rgb(37, 22, 13);
+    margin: 0 auto;
+}
+}
+
+@media screen and (max-width: 600px) {
+#sketchphoto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    'quote'
+    'content'
+    'gallery'
+    'hire'
+    ;
+    justify-content: center;
+    background-color: rgb(37, 22, 13);
+    margin: 0 auto;
+}
+}
